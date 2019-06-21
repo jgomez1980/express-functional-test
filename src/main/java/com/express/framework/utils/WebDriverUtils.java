@@ -26,7 +26,8 @@ import com.google.common.base.Function;
 public class WebDriverUtils {
     protected static final int TIME_OUT_FOR_ELEMENT = 5;
     protected static final int TIME_OUT_FOR_WAIT = 180;
-    private static String ENVIRONMENT = AutomationProperties.getString("environment").replaceAll(" ", "");
+    private static String ENVIRONMENT = "prod";
+    //private static String ENVIRONMENT = AutomationProperties.getString("environment").replaceAll(" ", "");
     private static WebDriverWait driverWait;
 
     public static String getEnvironment() {
