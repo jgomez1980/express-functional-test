@@ -56,6 +56,15 @@ public class TestContext {
 //            options.setAcceptInsecureCerts(true);
             driver = new ChromeDriver();
             break;
+        case "CHROMELINUX":
+            System.setProperty("webdriver.chrome.driver", "/usr/local/share/chromedriver");
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--start-maximized"); 
+            options.addArguments("--headless");                                                                                                                                            
+            options.addArguments("--disable-extensions");                                                                                                                                 
+            options.addArguments("--no-sandbox");   
+            driver = new ChromeDriver(options);
+            break;         
         case "IE":
             InternetExplorerOptions IEOptions = new InternetExplorerOptions();
             IEOptions.setCapability(CapabilityType.BROWSER_NAME, "internet explorer");
